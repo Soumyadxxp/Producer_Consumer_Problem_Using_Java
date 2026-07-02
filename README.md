@@ -1,17 +1,12 @@
-# Producer Consumer Problem Using Java
+# Producer-Consumer Problem Using Java
 
-This repository contains a Java implementation of the classic **Producer-Consumer Problem**, a fundamental synchronization problem in Operating Systems and Concurrent Programming.
+This repository contains a Java implementation of the classic **Producer-Consumer Problem** using **Multithreading**, **Synchronization**, and the **wait()/notify()** mechanism. The program demonstrates inter-thread communication through a shared buffer.
 
-## Problem Statement
+## Algorithm
 
-The Producer-Consumer Problem involves:
-- A **Producer** thread that generates data and places it into a shared buffer.
-- A **Consumer** thread that removes and processes data from the shared buffer.
-
-Proper synchronization is required to ensure that:
-- The producer does not add data when the buffer is full.
-- The consumer does not remove data when the buffer is empty.
-- Data consistency is maintained between multiple threads.
+- Producer-Consumer Problem using Threads
+- Synchronization using `synchronized`
+- Inter-Thread Communication using `wait()` and `notify()`
 
 ## Repository Contents
 
@@ -20,20 +15,36 @@ Proper synchronization is required to ensure that:
 
 ## Features
 
-- Demonstrates thread synchronization.
-- Uses a shared buffer for communication between threads.
-- Suitable for Operating Systems and Java Concurrency laboratory exercises.
-- Easy-to-understand implementation for learning purposes.
+- Fixed-size shared buffer of size 5.
+- Producer thread inserts items into the buffer.
+- Consumer thread removes items from the buffer.
+- Uses `wait()` when the buffer is full or empty.
+- Uses `notify()` to wake up the waiting thread.
+- Displays the buffer status after every production and consumption.
+- Simple and easy-to-understand implementation for Operating Systems laboratory experiments.
+
+## Concepts Covered
+
+- Java Multithreading
+- Producer-Consumer Problem
+- Synchronization
+- Shared Resources
+- Critical Section
+- Inter-Thread Communication
+- `wait()` Method
+- `notify()` Method
+- Thread Lifecycle
 
 ## Note
 
-- The Java program provided in this repository is designed primarily for educational purposes, emphasizing clarity and comprehension over optimization.
-- The implementation prioritizes readability and conceptual understanding rather than production-level performance.
-- Users may modify and extend the program according to their academic or project requirements.
+- This Java program is designed primarily for educational purposes, emphasizing clarity and comprehension over optimization.
+- The implementation demonstrates the use of synchronization to prevent race conditions while accessing a shared buffer.
+- The program prioritizes readability and conceptual understanding rather than production-level optimization.
+- It can be compiled and executed using any standard Java Development Kit (JDK).
 
-## Compilation and Execution
+## Compilation
 
-Compile and run the program using:
+Compile and run the program using the Java compiler.
 
 ```bash
 javac ProducerConsumer.java
