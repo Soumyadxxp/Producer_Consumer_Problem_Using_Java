@@ -1,33 +1,41 @@
-# Producer-Consumer Problem Solver
+# Producer Consumer Problem Using Java
 
-This repository contains a Java program that implements a solution to the classic Producer-Consumer problem using multi-threading and synchronization.
+This repository contains a Java implementation of the classic **Producer-Consumer Problem**, a fundamental synchronization problem in Operating Systems and Concurrent Programming.
 
-## Overview
+## Problem Statement
 
-The Producer-Consumer problem represents a synchronization problem between two threads, where one (the producer) produces data or resources and puts it into a shared buffer, and the other (the consumer) takes data or resources out of the buffer.
+The Producer-Consumer Problem involves:
+- A **Producer** thread that generates data and places it into a shared buffer.
+- A **Consumer** thread that removes and processes data from the shared buffer.
 
-## Program Structure
+Proper synchronization is required to ensure that:
+- The producer does not add data when the buffer is full.
+- The consumer does not remove data when the buffer is empty.
+- Data consistency is maintained between multiple threads.
 
-- **`Producer.java`**: Defines the Producer class that implements the Runnable interface to simulate a producer placing items into the buffer.
-- **`Consumer.java`**: Defines the Consumer class that implements the Runnable interface to simulate a consumer removing items from the buffer.
-- **`Buffer.java`**: Defines the Buffer class with a static boolean array to represent the buffer and a shared index for tracking the buffer position.
-- **`ProducerConsumer.java`**: Main class that initializes and starts the producer and consumer threads, handling their synchronization and execution.
+## Repository Contents
 
-## How to Use
+- `ProducerConsumer.java` – Java implementation of the Producer-Consumer Problem.
+- `README.md` – Repository documentation.
 
-1. **Clone the Repository**: Clone this repository to your local machine using the following command:
-    ```bash
-    git clone https://github.com/your-username/producer-consumer.git
-    ```
+## Features
 
-2. **Compile and Run**: Use any Java IDE or compile the Java files using the command line. Execute the `ProducerConsumer.java` file to run the program.
-
-3. **Observing Output**: The program will simulate the producer placing items into the buffer and the consumer removing items from the buffer. It will display the index where items are placed or consumed and the status of the buffer after each action.
-
-4. **Terminating the Program**: The program runs indefinitely until manually terminated. To stop the program, use the appropriate stop/terminate command for your IDE or terminate the process in the command line.
-
-5. **Contributions**: Contributions and improvements to the code are welcome! Fork this repository, make changes, and create a pull request.
+- Demonstrates thread synchronization.
+- Uses a shared buffer for communication between threads.
+- Suitable for Operating Systems and Java Concurrency laboratory exercises.
+- Easy-to-understand implementation for learning purposes.
 
 ## Note
 
-- This implementation uses synchronized blocks and wait/notify mechanisms for thread synchronization. Understanding multi-threading concepts is crucial for modifying or extending this code for specific use cases.
+- The Java program provided in this repository is designed primarily for educational purposes, emphasizing clarity and comprehension over optimization.
+- The implementation prioritizes readability and conceptual understanding rather than production-level performance.
+- Users may modify and extend the program according to their academic or project requirements.
+
+## Compilation and Execution
+
+Compile and run the program using:
+
+```bash
+javac ProducerConsumer.java
+java ProducerConsumer
+```
